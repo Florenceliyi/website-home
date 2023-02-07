@@ -5,7 +5,9 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <div class="outsideWindow">
+      <img alt="Vue logo" class="logo" src="@/assets/jpg/head.jpg" width="125" height="125" />
+    </div>
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
@@ -25,9 +27,13 @@ header {
   line-height: 1.5;
   max-height: 100vh;
 }
-
+.outsideWindow{
+  border-radius: 50%;
+}
 .logo {
   display: block;
+  object-fit: cover;
+  border-radius: 50%;
   margin: 0 auto 2rem;
 }
 
