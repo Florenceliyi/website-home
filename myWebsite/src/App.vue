@@ -4,7 +4,8 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
+  <div class="bg">
+    <header>
     <div class="outsideWindow">
       <img alt="Vue logo" class="logo" src="@/assets/jpg/head.jpg" width="125" height="125" />
     </div>
@@ -19,10 +20,19 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </header>
 
+  </div>
   <RouterView />
 </template>
 
 <style scoped>
+.bg{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-75deg, #715633, #2b2522);
+  mask: url(@/assets/jpg/Q版设计);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
